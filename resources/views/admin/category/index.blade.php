@@ -2,6 +2,11 @@
 
 @section('content')
 <div class="row">
+    @if(session('message'))
+        <div class="alert alert-success" role="alert">
+            {{ session('message') }}
+        </div>
+    @endif
     <div class="col-md-12 grid-margin">
       <div class="d-flex justify-content-between flex-wrap">
         <div class="d-flex align-items-end flex-wrap">

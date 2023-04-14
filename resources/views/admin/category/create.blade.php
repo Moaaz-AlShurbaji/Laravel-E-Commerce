@@ -22,22 +22,34 @@
 
             <div class="col-md-6 mb-3">
                 <label for="category_name" class="form-label">Category Name</label>
-                <input type="text" name="name" class="form-control rounded" id="category_name" aria-describedby="">
+                <input type="text" name="name" class="form-control rounded" id="category_name">
+                @error('name')
+                    <small class="text-danger">{{ $message }}</small>
+                @enderror
             </div>
 
             <div class="col-md-6 mb-3">
                 <label for="slug" class="form-label">Slug</label>
                 <input type="text" name="slug" class="form-control rounded" id="slug">
+                @error('slug')
+                    <small class="text-danger">{{ $message }}</small>
+                @enderror
             </div>
 
             <div class="col-md-12 mb-3">
                 <label for="description" class="form-label">Description</label>
                 <input type="text" name="description" class="form-control rounded" id="description">
+                @error('description')
+                    <small class="text-danger">{{ $message }}</small>
+                @enderror
             </div>
 
             <div class="col-md-6 mb-3">
                 <label for="image" class="form-label">Image</label>
                 <input class="form-control bg-secondary" name="image" type="file" id="image">
+                @error('image')
+                    <small class="text-danger">{{ $message }}</small>
+                @enderror
             </div>
 
             <div class="col-md-6 mb-3">
@@ -51,20 +63,29 @@
             <div class="col-md-12 mb-3">
                 <label for="meta_title" class="form-label">Meta Title</label>
                 <input type="text" name="meta_title" class="form-control rounded" id="meta_title">
+                @error('meta_title')
+                    <small class="text-danger">{{ $message }}</small>
+                @enderror
             </div>
 
             <div class="col-md-12 mb-3">
                 <label for="meta_keyword" class="form-label">Meta Keyword</label>
                 <textarea type="text" name="meta_keyword" class="form-control rounded" id="meta_keyword"></textarea>
+                @error('meta_keyword')
+                    <small class="text-danger">{{ $message }}</small>
+                @enderror
             </div>
 
             <div class="col-md-12 mb-3">
                 <label for="meta_description" class="form-label">Meta Description</label>
                 <textarea type="text" name="meta_description" class="form-control rounded" id="meta_description"></textarea>
+                @error('meta_description')
+                    <small class="text-danger">{{ $message }}</small>
+                @enderror
             </div>
 
             <div>
-                <button type="submit" class="btn btn-primary float-end">Submit</button>
+                <button type="submit" class="btn btn-primary float-end">Save</button>
             </div>
             
         </div>
